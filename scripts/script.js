@@ -23,4 +23,10 @@ function processData() {
 
     productList.appendChild(new ProductItem(productData));
   }
+
+  const cartLabel = document.getElementById('cart-count');
+
+  const cartCount = parseInt(localStorage.getItem('cart')) || 0;
+
+  cartLabel.textContent = cartCount;
 }
